@@ -2,7 +2,7 @@ package strategy.randomNumberStrategy;
 
 import java.util.Random;
 
-public class RealRandomNumber implements RandomNumber {
+public class RealRandomNumber implements RandomNumber1 {
   private Random random;
 
   public RealRandomNumber(Random random) {
