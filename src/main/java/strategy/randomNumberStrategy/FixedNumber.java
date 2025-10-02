@@ -1,6 +1,6 @@
 package strategy.randomNumberStrategy;
 
-public class FixedNumber implements RandomNumber {
+public class FixedNumber implements RandomValue {
   private final int fixedNumber;
 
   public FixedNumber(int fixedNumber) {
