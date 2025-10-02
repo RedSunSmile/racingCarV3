@@ -1,5 +1,5 @@
 package strategy.randomNumberStrategy;
 
-public interface RandomNumber1 {
+public interface RandomNumber {
   int generate();
 }
