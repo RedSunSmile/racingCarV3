@@ -188,26 +188,4 @@ public class CarListTest {
     assertThat(winners.get(1).getName()).isEqualTo("apple");
     assertThat(winners.get(2).getName()).isEqualTo("bono");
   }
-
-  //우승자 목록 알려주기//공동우승
-  public List<Car> makeWinMultipleList(List<Car> cars) {
-    List<Car> winners = makeWinList(cars);
-    List<Car> sortedWinners = mergeSortStrategy.mergeSortCars(winners);
-    return sortedWinners;
-  }
-
-  //단독우승
-  private List<Car> makeWinList(List<Car> cars) {
-    int maxScore = cars.stream()
-      .mapToInt(Car::getPositionScore)
-      .max()
-      .orElse(Integer.MIN_VALUE);
-
-    int winningScore = Math.min(maxScore, 90);
-
-    List<Car> winners = cars.stream()
-      .filter(car -> car.getPositionScore() >= winningScore)
-      .collect(Collectors.toList());
-    return winners;
-  }
 }
